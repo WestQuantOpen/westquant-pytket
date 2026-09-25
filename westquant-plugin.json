@@ -1,0 +1,30 @@
+{
+  "plugin": {
+    "id": "westquant.pytket",
+    "version": "0.1.0a1",
+    "api_version": "0.1"
+  },
+  "framework": {
+    "name": "pytket",
+    "supported_versions": ">=2.18,<3"
+  },
+  "capabilities": {
+    "import": [
+      "circuit"
+    ],
+    "transformations": [
+      "pass_sequence",
+      "placement",
+      "routing",
+      "rebase",
+      "optimization"
+    ],
+    "evaluators": [
+      "gate_count",
+      "two_qubit_gates",
+      "depth"
+    ],
+    "repgraph_export": true,
+    "wqt_policy": false
+  }
+}

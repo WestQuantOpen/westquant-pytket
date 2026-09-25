@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "westquant-pytket"
+version = "0.1.0a1"
+description = "Sequential representation search for pytket compiler passes and mappings"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "westquant-core>=0.2.0a1",
+  "pytket>=2.18,<3",
+]
+
+[project.scripts]
+westquant-pytket-search = "westquant_pytket.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/WestQuantOpen"
+Source = "https://github.com/WestQuantOpen/westquant-pytket"
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "../westquant-core/src"]
